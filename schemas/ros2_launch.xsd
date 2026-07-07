@@ -565,6 +565,13 @@
           </xs:documentation>
         </xs:annotation>
       </xs:attribute>
+      <xs:attribute name="respawn" type="xs:boolean" use="optional">
+        <xs:annotation>
+          <xs:documentation xml:lang="en">
+            Whether the launched ROS node should be respawned if it dies.
+          </xs:documentation>
+        </xs:annotation>
+      </xs:attribute>
       <xs:attribute name="ros_args" type="xs:string" use="optional">
         <xs:annotation>
           <xs:documentation xml:lang="en">
