@@ -106,6 +106,22 @@
           </xs:documentation>
         </xs:annotation>
       </xs:attribute>
+      <xs:attribute name="if" type="xs:string" use="optional">
+        <xs:annotation>
+          <xs:documentation xml:lang="en">
+            A predicate to condition launch inclusion i.e. only do
+            so if the predicate evaluates to a truthy value.
+          </xs:documentation>
+        </xs:annotation>
+      </xs:attribute>
+      <xs:attribute name="unless" type="xs:string" use="optional">
+        <xs:annotation>
+          <xs:documentation xml:lang="en">
+            A predicate to condition launch inclusion i.e. do
+            so unless the predicate evaluates to a truthy value.
+          </xs:documentation>
+        </xs:annotation>
+      </xs:attribute>
     </xs:complexType>
   </xs:element>
 
