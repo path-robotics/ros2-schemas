@@ -68,6 +68,8 @@
         <xs:element ref="group"/>
         <xs:element ref="set_env"/>
         <xs:element ref="unset_env"/>
+        <xs:element ref="set_parameter"/>
+        <xs:element ref="set_parameter_from_file"/>
       </xs:choice>
       <xs:attribute name="version" use="required">
         <xs:annotation>
@@ -638,6 +640,51 @@
           <xs:documentation xml:lang="en">
             A predicate to condition ROS node launch i.e. do so unless
             the predicate evaluates to a truthy value.
+          </xs:documentation>
+        </xs:annotation>
+      </xs:attribute>
+    </xs:complexType>
+  </xs:element>
+
+  <xs:element name="set_parameter">
+    <xs:annotation>
+      <xs:documentation xml:lang="en">
+        Action that sets a parameter in the current context.
+
+        This parameter will be set in all the nodes launched in the same scope.
+      </xs:documentation>
+    </xs:annotation>
+
+    <xs:complexType>
+      <xs:attribute name="name" type="xs:string" use="required">
+        <xs:annotation>
+          <xs:documentation xml:lang="en">
+            Parameter Name
+          </xs:documentation>
+        </xs:annotation>
+      </xs:attribute>
+      <xs:attribute name="value" type="xs:string" use="required">
+        <xs:annotation>
+          <xs:documentation xml:lang="en">
+            Parameter Value
+          </xs:documentation>
+        </xs:annotation>
+      </xs:attribute>
+    </xs:complexType>
+  </xs:element>
+
+  <xs:element name="set_parameter_from_file">
+    <xs:annotation>
+      <xs:documentation xml:lang="en">
+        Action that sets parameters for all nodes in scope based on a given yaml file.
+      </xs:documentation>
+    </xs:annotation>
+
+    <xs:complexType>
+      <xs:attribute name="filename" type="xs:string" use="required">
+        <xs:annotation>
+          <xs:documentation xml:lang="en">
+            Parameter file filename
           </xs:documentation>
         </xs:annotation>
       </xs:attribute>
