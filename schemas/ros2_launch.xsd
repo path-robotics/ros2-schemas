@@ -689,7 +689,7 @@
     </xs:complexType>
   </xs:element>
 
-  <xs:element name="set_parameter_from_file">
+  <xs:element name="set_parameters_from_file">
     <xs:annotation>
       <xs:documentation xml:lang="en">
         Action that sets parameters for all nodes in scope based on a given yaml file.
