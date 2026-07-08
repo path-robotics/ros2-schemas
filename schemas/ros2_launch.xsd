@@ -69,7 +69,7 @@
         <xs:element ref="set_env"/>
         <xs:element ref="unset_env"/>
         <xs:element ref="set_parameter"/>
-        <xs:element ref="set_parameter_from_file"/>
+        <xs:element ref="set_parameters_from_file"/>
       </xs:choice>
       <xs:attribute name="version" use="required">
         <xs:annotation>
